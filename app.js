@@ -1,32 +1,24 @@
+var inputText = document.querySelector("#input-text");
 
-var inputArea = document.querySelector("#first-area");
+var inputButton = document.querySelector("#input-btn");
+var outputText = document.querySelector("#output-text");
 
-var btnTranslation = document.querySelector("#btn");
+var serverUrl = "https://api.funtranslations.com/translate/minion.json";
 
-var outputArea = document.querySelector("#second-area");
+function translatedURL(text) {
+    return serverUrl + "?" + "text=" + text;
+}
 
-// console.log(inputArea);
-// console.log(btnTranslation);
+function userOutput() {
+    var userText = inputText.value;
 
-var serverURL = "https://api.funtranslations.com/translate/minion.json";
-
-function getTranslationURL(text) {
-    return serverURL + "?" + "text=" + text
-};
-
-function secondBox() { 
-    // outputBox.innerText = "ajajaj " + outputArea.value;
-
-    var inputText = inputArea.value;
-
-    fetch(getTranslationURL(inputText))
+    fetch(translatedURL(userText))
     .then(response => response.json())
     .then(json => {
-        var textTranlation = json.contents.translated;
-
-        outputArea.innerText = textTranlation;
-        }
+        var newTextTranslation = json.contents.translated;
+        outputText.innerText = newTextTranslation;
+    }
     )
 };
 
-btnTranslation.addEventListener("click", secondBox());
+inputButton.addEventListener("click", userOutput)
