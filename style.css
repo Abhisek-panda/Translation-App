@@ -2,22 +2,26 @@
     margin:0;
 
 }
-
 body{
-    margin: 0 3rem 0 ;
-}
-header {
-    width: 70%;
-    background-color: yellow;
+    display: block;
 }
 
-h1{
-    text-align: center;
+
+header {
+   width:70vh;
+   height:9vh;
+   background-color: yellow;
+   text-align: center;
+   margin: 12px auto;
+   border-radius: 0 18px 0 18px;
 }
+
+
 
 #main { 
     max-width: 70%;
     /* border: 2px solid red; */
+    margin: 12px auto;
 }
 
 #input-text { 
@@ -25,12 +29,12 @@ h1{
     margin: 12px auto;
     height: 15vh;
     width: 70%;
-    border: 2px solid black
+    border: 2px solid black;
 }
 
 #input-btn {
     display: block;
-    margin:2vh auto;
+    margin:12px auto;
     padding: 4px;
     cursor:pointer;
 }
@@ -45,3 +49,21 @@ h1{
     height: 11vh
     
 }
+footer{
+    bottom: 0;
+    position:fixed;
+    text-align: center;
+    width: 100%;
+    background-color: antiquewhite;
+    border-radius: 10px 10px 0 0;
+}
+
+#footer-list{
+    list-style-type: none;
+    display: flex;
+    justify-content: center;
+    padding: 1.2rem;
+}
+
+
+
