@@ -1,16 +1,18 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@400;700&display=swap');
 *{
     margin:0;
 
 }
 body{
     display: block;
+    font-family: Rubik, sans-serif;
 }
 
 
 header {
    width:70vh;
    height:9vh;
-   background-color: yellow;
+   background-color: #ffff00;
    text-align: center;
    margin: 12px auto;
    border-radius: 0 18px 0 18px;
@@ -22,6 +24,7 @@ header {
     max-width: 70%;
     /* border: 2px solid red; */
     margin: 12px auto;
+    margin-top: 3rem;
 }
 
 #input-text { 
@@ -35,8 +38,10 @@ header {
 #input-btn {
     display: block;
     margin:12px auto;
-    padding: 4px;
+    padding: 10px;
     cursor:pointer;
+    background-color: #f9ee9d;
+    border-radius: 0.8rem;
 }
 
 #output-line {
@@ -54,7 +59,7 @@ footer{
     position:fixed;
     text-align: center;
     width: 100%;
-    background-color: antiquewhite;
+    background-color: #0a1faf;
     border-radius: 10px 10px 0 0;
 }
 
@@ -65,5 +70,18 @@ footer{
     padding: 1.2rem;
 }
 
+a {
+    color:white;
+    text-decoration: none;
+    padding:5px;
+}
 
+a:hover{
+    color:black;
+}
+
+
+footer h2 {
+    color: #76d7ea;
+}
 
